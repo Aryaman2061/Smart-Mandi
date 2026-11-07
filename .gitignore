@@ -1,0 +1,95 @@
+
+# ==================================
+# PYTHON
+# ==================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+
+# ==================================
+# ENVIRONMENT VARIABLES / SECRETS
+# ==================================
+
+.env
+.env.*
+!.env.example
+
+# ==================================
+# DATASETS
+# ==================================
+
+# Raw and processed datasets
+backend/data/raw/*
+backend/data/processed/*
+
+# Keep folder structure
+!backend/data/raw/.gitkeep
+!backend/data/processed/.gitkeep
+
+# CSV and Excel files (avoid uploading large datasets)
+*.csv
+*.xlsx
+*.xls
+
+# ==================================
+# MACHINE LEARNING
+# ==================================
+
+*.pkl
+*.joblib
+*.h5
+*.keras
+*.onnx
+
+# Model checkpoints
+checkpoints/
+models/
+
+# ==================================
+# JUPYTER
+# ==================================
+
+.ipynb_checkpoints/
+
+# ==================================
+# IDE
+# ==================================
+
+.vscode/
+.idea/
+
+# ==================================
+# LOGS
+# ==================================
+
+*.log
+logs/
+
+# ==================================
+# OPERATING SYSTEM
+# ==================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==================================
+# NODE.JS (FUTURE FRONTEND)
+# ==================================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
