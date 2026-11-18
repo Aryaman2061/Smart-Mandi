@@ -45,3 +45,15 @@ class PriceResponse(BaseModel):
     source: str | None
 
     model_config = ConfigDict(from_attributes=True)
+
+
+from pydantic import BaseModel
+
+
+class PricePredictionRequest(BaseModel):
+
+    state: str
+    district: str
+    market: str
+    commodity: str
+    grade: str = "Unknown"

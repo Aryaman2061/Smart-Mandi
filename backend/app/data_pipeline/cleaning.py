@@ -1,7 +1,5 @@
-
 import re
 import pandas as pd
-
 
 def normalize_column_name(column):
 
@@ -17,7 +15,6 @@ def normalize_column_name(column):
     column = re.sub(r"[^a-z0-9]+", "_", column)
 
     return column.strip("_")
-
 
 def clean_market_data(df: pd.DataFrame):
 

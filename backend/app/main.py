@@ -6,12 +6,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.database import Base, engine
 from app.config import settings
 
+from app.routers import predictions
+
 from app.routers import (
     commodities,
     markets,
     prices
 )
-
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -47,6 +48,11 @@ app.add_middleware(
 
 app.include_router(
     commodities.router,
+    prefix="/api/v1"
+)
+
+app.include_router(
+    predictions.router,
     prefix="/api/v1"
 )
 
